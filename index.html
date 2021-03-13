@@ -1,0 +1,175 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./estilo_sn5.css">
+    <link rel="icon" href="./media/logo_sn_white.png">
+    <title>Reportes de cotizaciones</title>
+    <style>
+        body {
+            overflow: hidden;
+            /* Hide scrollbars */
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #fff;">
+    <!--Menu superior-->
+    <nav class="menu_sn5_top container-fluid">
+        <div class="col-xs-5 col-md-5">
+            <div class="lg-cliente">
+                <img src="https://qaportal.senegocia.com/Content/app/images/Empresas/20376_5250_20200720161913.png" alt="">
+            </div>
+
+        </div>
+        <div class="btn_config">
+            <i class="fal fa-cog"></i>
+        </div>
+        <div class="col-xs-7 col-md-7">
+            <div class="lg-senegocia">
+                <img src="https://qaportal.senegocia.com/Content/app/images/lg_senegocia.png" alt="">
+            </div>
+        </div>
+
+    </nav>
+    <nav id="menu_sn5_middle">
+        <div class="user_sec_sn5">
+            <div class="foto_perfil_sn5">
+                <img class=" img-thumbnail rounded-circle" src="https://qaportal.senegocia.com/Content/app/images/Avatar/20376_6706_20200721182532.jpg" alt="">
+            </div>
+            <div class="text_perfil_sn5">
+
+                <span>ABASTIBLE S.A</span>
+                <span>Usuario Prueba</span>
+                <span>Ambiente Comprador</span>
+            </div>
+            <div class="icon_perfil_sn5">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="buscador_sn5">
+            <div class="drop_sn5_buscador">
+                Productos o servicios
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <input class="buscador_barra" type="text" placeholder="Ingrese nombre, descripción o código...">
+
+            <div class="btn btn_buscar">
+                <i class="fas fa-search"></i>
+            </div>
+
+
+
+        </div>
+        <div class="soporte_text_sn5">
+            <span>Soporte</span>
+            <span>+562 2 9238700</span>
+        </div>
+    </nav>
+    <nav class="breadcums_title">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>Reporte cotizaciones</span>
+    </nav>
+    <!--Menu lateral-->
+    <nav class="menu_lateral_sn5 menu_bg">
+        <ul class="menu_item_sn5">
+            <a href="#">
+                <li class="menu_link_sn5">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </li>
+            </a>
+
+        </ul>
+
+        <ul class="menu_item_sn5">
+            <a href="#">
+                <li class="menu_link_sn5">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Cotizaciones</span>
+                </li>
+            </a>
+
+        </ul>
+
+        <ul class="menu_item_sn5">
+            <a href="#">
+                <li class="menu_link_sn5">
+                    <i class="fas fa-cogs"></i>
+                    <span>Admin</span>
+                </li>
+            </a>
+        </ul>
+        <ul class="menu_item_sn5">
+            <a href="#">
+                <li class="menu_link_sn5">
+                    <i class="fas fa-users"></i>
+                    <span>Proveedores</span>
+                </li>
+            </a>
+        </ul>
+        <ul class="menu_item_sn5">
+            <a href="#">
+                <li class="menu_link_sn5">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reportes</span>
+                </li>
+            </a>
+        </ul>
+    </nav>
+
+    <!--Contenedor-->
+    <div>
+        <iframe id="divIframePrincipal" src="./secciones/reporteria_cotizador_sn5.html" border="0"></iframe>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script>
+        $('.menu-link').click(function() {
+            var url = $(this).attr('rel');
+            $('#divIframePrincipal').attr('src', url);
+        });
+    </script>
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the navbar
+        var navbar = document.getElementById("menu_sn5_middle");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+
+    <script src="https://kit.fontawesome.com/bd4dd1fbd8.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

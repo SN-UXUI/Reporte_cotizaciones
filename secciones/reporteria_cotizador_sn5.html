@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../scripts/ui-bootsrap/ui-bootstrap-custom-2.5.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/18f1d9fe30.js" crossorigin="anonymous"></script>
+
+    <title>reporte_cotizador</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+        .custom-select {
+            border-radius: 0!important;
+        }
+        
+        .seleccion-menu span {
+            font-weight: bold;
+        }
+        
+        .kpi-report-color {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #0185B3;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 130px;
+            width: 240px;
+            margin: 4%;
+        }
+        
+        .kpi-report-color-big {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: white;
+            border: grey solid 1px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            width: 490px;
+            margin: 2%;
+            margin-top: 0%;
+        }
+        
+        .kpi-report-color-header {
+            background-color: #006588;
+            height: 43px;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .kpi-content {
+            height: 88px!important;
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        
+        .kpi-barras span {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+            margin-right: 2%;
+            width: 150px;
+        }
+        
+        .kpi-barras .kpi-barras-item {
+            width: 100%;
+        }
+        
+        .kpi-barras .kpi-barras-item .progress {
+            width: 100%;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color:#F7F7F7;">
+    <div class="container-fluid">
+        <div class="d-flex w-100 flex-row justify-content-start align-items-end">
+            <div class="w-25 seleccion-menu" style="margin-right: 2%;">
+                <span>Año</span>
+                <select class="custom-select">
+            <option selected>2021</option>
+            <option value="1">2020</option>
+          </select>
+            </div>
+            <div class="w-25 seleccion-menu" style="margin-right: 2%;">
+                <span>Moneda</span>
+                <select class="custom-select">
+          <option selected>CLP - Peso Chileno</option>
+          <option value="1">USD - Dolar Estadounidese</option>
+          <option value="2">UF - Unidad Fomento</option>
+        </select>
+
+            </div>
+            <button class="btn btn-primary h-25" style="font-weight: bold;">
+              <i class="fas fa-search"></i>
+              Buscar
+            </button>
+        </div>
+        <div class="d-flex flex-row w-100 h-100">
+            <div class="flex-column d-flex align-content-start" style="width:513px;background-color:none;padding-top: 1%;">
+                <div class="d-flex flex-row">
+                    <div class="flex-column d-flex" style="margin-right: 2%;">
+                        <div class="kpi-report-color ">
+                            <div class="kpi-report-color-header d-flex">Cotizaciones emitidas</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">30</div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">Monto adjudicado</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">CLP MM 150</div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">Ofertas por producto</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">5,3 ofertas</div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">Ahorros</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">CLP 150.567.850</div>
+                        </div>
+                    </div>
+                    <div class="flex-column d-flex">
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">Cotizaciones Adjudicadas</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content flex-row"><b style="margin-right: 4%;">125</b><b>91%</b></div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">% Monto adjudicado</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">91%</div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">N° de oferentes por cotización</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">4,6 oferentes</div>
+                        </div>
+                        <div class="kpi-report-color">
+                            <div class="kpi-report-color-header d-flex">Cantidad de usuarios</div>
+                            <div class="d-flex justify-content-center align-items-center w-100 kpi-content">6</div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="kpi-report-color-big">
+                    <div class="kpi-report-color-header d-flex">Cotizaciones Adjudicadas</div>
+                    <div class="d-flex flex-column kpi-barras" style="padding: 2%;">
+                        <div class="d-flex flex-row justify-content-start align-items-center kpi-barras-item">
+                            <span>Emitida</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">150</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center kpi-barras-item">
+                            <span>En proceso</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center kpi-barras-item">
+                            <span>Adj. total</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">87</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center kpi-barras-item">
+                            <span>Adj. parcial</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center kpi-barras-item">
+                            <span>Desierta</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 28%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">28</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex-column">
+
+                <div style="background-color: brown;width: 740px;height: 370px;margin-left: 16px;margin-top: 22px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="740" height="370" viewBox="0 0 740 370">
+                    <rect id="Rectángulo_84" data-name="Rectángulo 84" width="740" height="370" fill="#fff"/>
+                    <text id="Cotizaciones_Adjudicadas_2020" data-name="Cotizaciones Adjudicadas 2020" transform="translate(283 22.517)" font-size="14" font-family="Helvetica"><tspan x="0" y="0">Cotizaciones Adjudicadas 2020</tspan></text>
+                    <text id="Montos" transform="translate(326.161 357)" font-size="10" font-family="Helvetica"><tspan x="0" y="0">Montos</tspan></text>
+                    <text id="Cantidad" transform="translate(388 357)" font-size="10" font-family="Helvetica"><tspan x="0" y="0">Cantidad</tspan></text>
+                    <text id="_0" data-name="0" transform="translate(27 264)" fill="#8f8f93" font-size="9" font-family="Helvetica"><tspan x="0" y="0">0</tspan></text>
+                    <text id="Enero" transform="translate(51.871 301.223) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Enero</tspan></text>
+                    <text id="Febrero" transform="translate(98.538 310.895) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Febrero</tspan></text>
+                    <text id="Marzo" transform="translate(151.611 302.255) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Marzo</tspan></text>
+                    <text id="Abril" transform="translate(208.642 296.444) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Abril</tspan></text>
+                    <text id="Mayo" transform="translate(255.583 300.573) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Mayo</tspan></text>
+                    <text id="Junio" transform="translate(305.137 300.573) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Junio</tspan></text>
+                    <text id="Julio" transform="translate(356.854 297.477) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Julio</tspan></text>
+                    <text id="Agosto" transform="translate(401.072 306.766) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Agosto</tspan></text>
+                    <text id="Septiembre" transform="translate(441.371 325.345) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Septiembre</tspan></text>
+                    <text id="Octubre" transform="translate(497.337 309.48) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Octubre</tspan></text>
+                    <text id="Noviembre" transform="translate(541.765 323.28) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Noviembre</tspan></text>
+                    <text id="Diciembre" transform="translate(592.615 320.184) rotate(-45)" fill="#8f8f93" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Diciembre</tspan></text>
+                    <text id="_4" data-name="4" transform="translate(27 213)" fill="#8f8f93" font-size="9" font-family="Helvetica"><tspan x="0" y="0">4</tspan></text>
+                    <text id="_8" data-name="8" transform="translate(27 157)" fill="#8f8f93" font-size="9" font-family="Helvetica"><tspan x="0" y="0">8</tspan></text>
+                    <text id="_12" data-name="12" transform="translate(22 102)" fill="#8f8f93" font-size="9" font-family="Helvetica"><tspan x="0" y="0">12</tspan></text>
+                    <text id="_16" data-name="16" transform="translate(22 49)" fill="#8f8f93" font-size="9" font-family="Helvetica"><tspan x="0" y="0">16</tspan></text>
+                    <text id="_32.000.000_CLP" data-name="32.000.000 CLP" transform="translate(649 49)" fill="#7cb5ec" font-size="9" font-family="Helvetica"><tspan x="0" y="0">32.000.000 CLP</tspan></text>
+                    <text id="_24.000.000_CLP" data-name="24.000.000 CLP" transform="translate(649 101)" fill="#7cb5ec" font-size="9" font-family="Helvetica"><tspan x="0" y="0">24.000.000 CLP</tspan></text>
+                    <text id="_16.000.000_CLP" data-name="16.000.000 CLP" transform="translate(649 156)" fill="#7cb5ec" font-size="9" font-family="Helvetica"><tspan x="0" y="0">16.000.000 CLP</tspan></text>
+                    <text id="Moneda" transform="translate(726 147) rotate(90)" fill="#7cb5ec" font-size="12" font-family="Helvetica"><tspan x="0" y="0">Moneda</tspan></text>
+                    <text id="_4.000.000_CLP" data-name="4.000.000 CLP" transform="translate(649 208)" fill="#7cb5ec" font-size="9" font-family="Helvetica"><tspan x="0" y="0">4.000.000 CLP</tspan></text>
+                    <text id="_0_CLP" data-name="0  CLP" transform="translate(649 265)" fill="#7cb5ec" font-size="9" font-family="Helvetica"><tspan x="0" y="0" xml:space="preserve">0  CLP</tspan></text>
+                    <text id="Cantidad-2" data-name="Cantidad" transform="translate(15 184) rotate(-90)" font-size="10" font-family="Helvetica"><tspan x="0" y="0">Cantidad</tspan></text>
+                    <line id="Línea_3" data-name="Línea 3" x2="597.522" transform="translate(41.264 266.393)" fill="none" stroke="#8f8f93" stroke-width="1"/>
+                    <line id="Línea_4" data-name="Línea 4" x2="597.522" transform="translate(41.264 212.384)" fill="none" stroke="#8f8f93" stroke-width="1"/>
+                    <line id="Línea_5" data-name="Línea 5" x2="597.522" transform="translate(41.264 158.376)" fill="none" stroke="#8f8f93" stroke-width="1"/>
+                    <line id="Línea_6" data-name="Línea 6" x2="597.522" transform="translate(41.264 104.368)" fill="none" stroke="#8f8f93" stroke-width="1"/>
+                    <line id="Línea_7" data-name="Línea 7" x2="597.522" transform="translate(41.264 50.359)" fill="none" stroke="#8f8f93" stroke-width="1"/>
+                    <path id="Trazado_81" data-name="Trazado 81" d="M690,631.7s154.086-1.56,200.335,0c45.466-7.86,79.566-178.531,97.326-178.531s34.709,18.218,51.759,18.218,31.358-42.92,50.54-42.92,29.369,110.456,51.149,107.792c17.05,4.491,27-28.071,49.018-26.948s49.834,55.019,49.834,55.019" transform="translate(-624.263 -366.481)" fill="none" stroke="#707070" stroke-width="2"/>
+                    <circle id="Elipse_6" data-name="Elipse 6" cx="3" cy="3" r="3" transform="translate(614 193)"/>
+                    <circle id="Elipse_7" data-name="Elipse 7" cx="3" cy="3" r="3" transform="translate(564 139)"/>
+                    <circle id="Elipse_8" data-name="Elipse 8" cx="3" cy="3" r="3" transform="translate(514 166)"/>
+                    <circle id="Elipse_9" data-name="Elipse 9" cx="3" cy="3" r="3" transform="translate(464 58)"/>
+                    <circle id="Elipse_10" data-name="Elipse 10" cx="3" cy="3" r="3" transform="translate(413 100)"/>
+                    <circle id="Elipse_11" data-name="Elipse 11" cx="4.5" cy="4.5" r="4.5" transform="translate(372.153 349)"/>
+                    <circle id="Elipse_16" data-name="Elipse 16" cx="4.5" cy="4.5" r="4.5" transform="translate(312.562 349)" fill="#7cb5ec"/>
+                    <circle id="Elipse_12" data-name="Elipse 12" cx="3" cy="3" r="3" transform="translate(213 261)"/>
+                    <circle id="Elipse_13" data-name="Elipse 13" cx="3" cy="3" r="3" transform="translate(163 261)"/>
+                    <circle id="Elipse_14" data-name="Elipse 14" cx="3" cy="3" r="3" transform="translate(113 261)"/>
+                    <circle id="Elipse_15" data-name="Elipse 15" cx="3" cy="3" r="3" transform="translate(63 261)"/>
+                    <line id="Línea_8" data-name="Línea 8" x2="14" transform="translate(369.653 353.5)" fill="none" stroke="#000" stroke-width="1"/>
+                    <rect id="Rectángulo_77" data-name="Rectángulo 77" width="26" height="96" transform="translate(302 169)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_79" data-name="Rectángulo 79" width="26" height="35" transform="translate(402 230)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_80" data-name="Rectángulo 80" width="24" height="80" transform="translate(454 185)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_81" data-name="Rectángulo 81" width="26" height="81" transform="translate(503 184)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_82" data-name="Rectángulo 82" width="24" height="75" transform="translate(554 190)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_83" data-name="Rectángulo 83" width="24" height="19" transform="translate(604 246)" fill="#7cb5ec"/>
+                    <rect id="Rectángulo_78" data-name="Rectángulo 78" width="23" height="184" transform="translate(354 81)" fill="#7cb5ec"/>
+                  </svg>
+
+                </div>
+                <div class="d-flex flex-row align-content-center justify-content-around">
+                    <div style="background-color: brown;width: 368px;height: 389px;margin-left: 16px;margin-top: 12px;margin-bottom: 19px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="368" height="389" viewBox="0 0 368 389">
+                        <g id="Rectángulo_121" data-name="Rectángulo 121" fill="#fff" stroke="#707070" stroke-width="1">
+                          <rect width="368" height="389" stroke="none"/>
+                          <rect x="0.5" y="0.5" width="367" height="388" fill="none"/>
+                        </g>
+                        <text id="Categorías_adjudicadas_por_cantidad_2020" data-name="Categorías adjudicadas por cantidad 2020" transform="translate(186 29)" font-size="15" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-150.051" y="0">Categorías adjudicadas por cantidad 2020</tspan></text>
+                        <g id="Grupo_211" data-name="Grupo 211" transform="translate(72 47.371)">
+                          <path id="Trazado_91" data-name="Trazado 91" d="M85.03,415.75V527.389L41.17,424.654A111.738,111.738,0,0,1,85.03,415.75Z" transform="translate(26.96 -415.75)" fill="#444449" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_92" data-name="Trazado 92" d="M104.4,522.895,22.29,446.954A112.213,112.213,0,0,1,60.538,420.16Z" transform="translate(7.591 -411.256)" fill="#7cb5ec" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_93" data-name="Trazado 93" d="M116.575,509.37,10.42,473.732a111.309,111.309,0,0,1,24.047-40.3Z" transform="translate(-4.586 -397.731)" fill="#91e8e1" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_94" data-name="Trazado 94" d="M119.53,489.028,8.067,499.73c-.344-3.513-.527-7.087-.527-10.7a110.935,110.935,0,0,1,5.834-35.638Z" transform="translate(-7.54 -377.389)" fill="#f45c5c" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_95" data-name="Trazado 95" d="M119.263,471.04,21.211,524.992A110.3,110.3,0,0,1,7.8,481.741Z" transform="translate(-7.273 -359.401)" fill="#2c908f" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_96" data-name="Trazado 96" d="M112.472,471.04l-65.8,90.317A111.979,111.979,0,0,1,14.42,524.992Z" transform="translate(-0.482 -359.401)" fill="#e4d355" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_97" data-name="Trazado 97" d="M96.14,471.04,73.592,580.4a111.714,111.714,0,0,1-43.252-19.04Z" transform="translate(15.85 -359.401)" fill="#f15d80" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_98" data-name="Trazado 98" d="M98.224,580.074a111.778,111.778,0,0,1-23.986,2.584A113.7,113.7,0,0,1,51.69,580.4L74.238,471.04Z" transform="translate(37.752 -359.401)" fill="#8085e9" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_99" data-name="Trazado 99" d="M129.349,560.852a111.627,111.627,0,0,1-42.543,19.222L62.82,471.04Z" transform="translate(49.17 -359.401)" fill="#f7a35d" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_100" data-name="Trazado 100" d="M174.83,488.916q0,4.119-.3,8.178L62.82,488.916,169.056,453.5A110.752,110.752,0,0,1,174.83,488.916Z" transform="translate(49.17 -377.277)" fill="#444449" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_101" data-name="Trazado 101" d="M169.056,491.973,62.82,527.389V415.75A112,112,0,0,1,169.056,491.973Z" transform="translate(49.17 -415.75)" fill="#7cb5ec" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                          <path id="Trazado_102" data-name="Trazado 102" d="M174.526,479.218a111.411,111.411,0,0,1-45.177,81.635L62.82,471.04Z" transform="translate(49.17 -359.401)" fill="#90ed7d" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                        </g>
+                        <text id="Basureros" transform="translate(75 295)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Basureros</tspan></text>
+                        <text id="Etiquetas" transform="translate(271 295)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Etiquetas</tspan></text>
+                        <text id="Imprentas" transform="translate(271 311)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Imprentas</tspan></text>
+                        <text id="Lockers" transform="translate(271 326)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Lockers</tspan></text>
+                        <text id="Notebook" transform="translate(271 342)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Notebook</tspan></text>
+                        <text id="Radiocomunicaciones" transform="translate(271 358)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Radiocomunicaciones</tspan></text>
+                        <text id="Toldos" transform="translate(271 372)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Toldos</tspan></text>
+                        <text id="Insumos_Para_Laboratorio" data-name="Insumos Para Laboratorio" transform="translate(75 311)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Insumos Para Laboratorio</tspan></text>
+                        <text id="Insumos_Medicos" data-name="Insumos Medicos" transform="translate(75 326)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Insumos Medicos</tspan></text>
+                        <text id="Mascarillas" transform="translate(75 342)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Mascarillas</tspan></text>
+                        <text id="Protectores_Solares" data-name="Protectores Solares" transform="translate(75 358)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Protectores Solares</tspan></text>
+                        <text id="Sillas" transform="translate(75 372)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Sillas</tspan></text>
+                        <ellipse id="Elipse_129" data-name="Elipse 129" cx="6" cy="6.5" rx="6" ry="6.5" transform="translate(60 285)" fill="#7bb5ec"/>
+                        <ellipse id="Elipse_130" data-name="Elipse 130" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(255 285)" fill="#404045"/>
+                        <ellipse id="Elipse_127" data-name="Elipse 127" cx="6" cy="7" rx="6" ry="7" transform="translate(60 300)" fill="#8fed7b"/>
+                        <circle id="Elipse_128" data-name="Elipse 128" cx="7" cy="7" r="7" transform="translate(255 300)" fill="#f7a35d"/>
+                        <ellipse id="Elipse_125" data-name="Elipse 125" cx="6" cy="6.5" rx="6" ry="6.5" transform="translate(60 316)" fill="#7f84e9"/>
+                        <ellipse id="Elipse_126" data-name="Elipse 126" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(255 316)" fill="#f15a7f"/>
+                        <circle id="Elipse_123" data-name="Elipse 123" cx="6" cy="6" r="6" transform="translate(60 332)" fill="#e4d253"/>
+                        <ellipse id="Elipse_124" data-name="Elipse 124" cx="7" cy="6" rx="7" ry="6" transform="translate(255 332)" fill="#288d8c"/>
+                        <ellipse id="Elipse_120" data-name="Elipse 120" cx="6" cy="6.5" rx="6" ry="6.5" transform="translate(60 347)" fill="#f45757"/>
+                        <ellipse id="Elipse_121" data-name="Elipse 121" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(255 347)" fill="#91e8e1"/>
+                        <ellipse id="Elipse_119" data-name="Elipse 119" cx="6" cy="7" rx="6" ry="7" transform="translate(60 362)" fill="#7cb5ec"/>
+                        <circle id="Elipse_122" data-name="Elipse 122" cx="7" cy="7" r="7" transform="translate(255 362)" fill="#424247"/>
+                      </svg>
+
+                    </div>
+                    <div style="background-color: brown;width: 368px;height: 389px;margin-left: 5px;margin-top: 12px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="368" height="389" viewBox="0 0 368 389">
+                        <g id="Rectángulo_122" data-name="Rectángulo 122" fill="#fff" stroke="#707070" stroke-width="1">
+                          <rect width="368" height="389" stroke="none"/>
+                          <rect x="0.5" y="0.5" width="367" height="388" fill="none"/>
+                        </g>
+                        <text id="Categorías_adjudicadas_por_monto_2020" data-name="Categorías adjudicadas por monto 2020" transform="translate(182 29)" font-size="15" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-142.123" y="0">Categorías adjudicadas por monto 2020</tspan></text>
+                        <g id="Grupo_212" data-name="Grupo 212" transform="translate(70.18 47.371)">
+                          <path id="Trazado_153" data-name="Trazado 153" d="M364.811,415.11l5.579,113.81L319.49,427.1C334.814,419.438,346.526,415.11,364.811,415.11Z" transform="translate(-256.58 -415.11)" fill="#91e8e1" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_154" data-name="Trazado 154" d="M393.765,522.72l-96.1-60.964A114.082,114.082,0,0,1,342.865,420.9Z" transform="translate(-279.955 -408.91)" fill="#2c908f" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_155" data-name="Trazado 155" d="M516.751,501.594A113.821,113.821,0,1,1,306.815,440.63l96.1,60.964,110.642-26.817A113.319,113.319,0,0,1,516.751,501.594Z" transform="translate(-289.11 -387.784)" fill="#e4d355" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_156" data-name="Trazado 156" d="M425.534,449.444,344.07,528.92l.01-113.81A113.44,113.44,0,0,1,425.534,449.444Z" transform="translate(-230.26 -415.11)" fill="#7cb5ec" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_157" data-name="Trazado 157" d="M437.379,446,344.07,511.166l81.464-79.477A111.981,111.981,0,0,1,437.379,446Z" transform="translate(-230.26 -397.356)" fill="#f7a35d" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_158" data-name="Trazado 158" d="M454.712,476.951,344.07,503.768,437.379,438.6A113.073,113.073,0,0,1,454.712,476.951Z" transform="translate(-230.26 -389.957)" fill="#f15d80" stroke="#fff" stroke-linejoin="round" stroke-width="0.5"/>
+                          <path id="Trazado_159" data-name="Trazado 159" d="M341.371,415.11h5.589l-.01,113.81Z" transform="translate(-233.15 -415.11)" fill="#444449" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+                        </g>
+                        <text id="Basureros" transform="translate(56 290)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Basureros</tspan></text>
+                        <text id="Etiquetas" transform="translate(248 290)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Etiquetas</tspan></text>
+                        <text id="Imprentas" transform="translate(56 305)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Imprentas</tspan></text>
+                        <text id="Lockers" transform="translate(248 321)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Lockers</tspan></text>
+                        <text id="Notebook" transform="translate(248 337)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Notebook</tspan></text>
+                        <text id="Radiocomunicaciones" transform="translate(248 351)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Radiocomunicaciones</tspan></text>
+                        <text id="Toldos" transform="translate(248 367)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Toldos</tspan></text>
+                        <text id="Insumos_Para_Laboratorio" data-name="Insumos Para Laboratorio" transform="translate(56 321)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Insumos Para Laboratorio</tspan></text>
+                        <text id="Insumos_Medicos" data-name="Insumos Medicos" transform="translate(248 305)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Insumos Medicos</tspan></text>
+                        <text id="Mascarillas" transform="translate(56 337)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Mascarillas</tspan></text>
+                        <text id="Protectores_Solares" data-name="Protectores Solares" transform="translate(56 351)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Protectores Solares</tspan></text>
+                        <text id="Sillas" transform="translate(56 367)" font-size="8" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Sillas</tspan></text>
+                        <ellipse id="Elipse_136" data-name="Elipse 136" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(40 282)" fill="#7bb5ec"/>
+                        <ellipse id="Elipse_131" data-name="Elipse 131" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(230 282)" fill="#404045"/>
+                        <circle id="Elipse_137" data-name="Elipse 137" cx="7" cy="7" r="7" transform="translate(40 297)" fill="#8fed7b"/>
+                        <circle id="Elipse_132" data-name="Elipse 132" cx="7" cy="7" r="7" transform="translate(230 297)" fill="#f7a35d"/>
+                        <ellipse id="Elipse_138" data-name="Elipse 138" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(40 313)" fill="#7f84e9"/>
+                        <ellipse id="Elipse_133" data-name="Elipse 133" cx="7" cy="6.5" rx="7" ry="6.5" transform="translate(230 313)" fill="#f15a7f"/>
+                        <ellipse id="Elipse_139" data-name="Elipse 139" cx="7" cy="6" rx="7" ry="6" transform="translate(40 329)" fill="#e4d253"/>
+                        <ellipse id="Elipse_134" data-name="Elipse 134" cx="7" cy="6" rx="7" ry="6" transform="translate(230 329)" fill="#288d8c"/>
+                        <circle id="Elipse_140" data-name="Elipse 140" cx="7" cy="7" r="7" transform="translate(40 343)" fill="#f45757"/>
+                        <circle id="Elipse_135" data-name="Elipse 135" cx="7" cy="7" r="7" transform="translate(230 343)" fill="#91e8e1"/>
+                        <circle id="Elipse_141" data-name="Elipse 141" cx="7" cy="7" r="7" transform="translate(40 359)" fill="#7cb5ec"/>
+                        <circle id="Elipse_142" data-name="Elipse 142" cx="7" cy="7" r="7" transform="translate(230 359)" fill="#424247"/>
+                      </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
